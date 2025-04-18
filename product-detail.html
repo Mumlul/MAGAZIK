@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин "Уютный дом" - Деревянный стол</title>
+    <title>LOШАДКИ - Арабская лошадь</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="horse-header">
         <div class="container">
-            <h1>Уютный дом</h1>
+            <h1>LOШАДКИ</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="products.html">Лошади</a></li>
                     <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
                     <li><a href="contact.html">Контакты</a></li>
                 </ul>
@@ -21,52 +21,54 @@
         </div>
     </header>
 
-    <main class="container product-detail">
-        <div class="product-images">
-            <img src="https://via.placeholder.com/400" alt="Деревянный стол" class="main-image">
+    <main class="container horse-detail">
+        <div class="horse-images">
+            <img src="https://source.unsplash.com/random/600x400?horse" alt="Арабская лошадь" class="main-image">
             <div class="thumbnails">
-                <img src="https://via.placeholder.com/100" alt="Деревянный стол 1">
-                <img src="https://via.placeholder.com/100" alt="Деревянный стол 2">
-                <img src="https://via.placeholder.com/100" alt="Деревянный стол 3">
+                <img src="https://source.unsplash.com/random/100x100?horse" alt="Арабская лошадь 1">
+                <img src="https://source.unsplash.com/random/100x100?horse2" alt="Арабская лошадь 2">
+                <img src="https://source.unsplash.com/random/100x100?horse3" alt="Арабская лошадь 3">
             </div>
         </div>
 
-        <div class="product-info">
-            <h2>Деревянный стол</h2>
-            <p class="price">8 799 ₽</p>
+        <div class="horse-info">
+            <h2>Арабская лошадь</h2>
+            <p class="price">1 500 000 ₽</p>
             <div class="rating">
-                ★★★★☆ <span class="reviews-count">(15 отзывов)</span>
+                ★★★★★ <span class="reviews-count">(24 отзыва)</span>
             </div>
             <p class="description">
-                Прочный и стильный деревянный стол из массива дуба. Идеально подходит для гостиной или кухни. 
-                Размеры: 120×80×75 см. Цвет: натуральное дерево. Гарантия 2 года.
+                Чистокровная арабская лошадь, 4 года, жеребец. Идеальные пропорции, 
+                победитель нескольких региональных выставок. Характер спокойный, 
+                отлично подходит для верховой езды.
             </p>
             
-            <div class="product-actions">
+            <div class="horse-actions">
                 <div class="quantity">
                     <button class="quantity-btn minus">-</button>
                     <input type="number" value="1" min="1" class="quantity-input">
                     <button class="quantity-btn plus">+</button>
                 </div>
-                <button class="btn add-to-cart" data-id="3">Добавить в корзину</button>
+                <button class="btn add-to-cart" data-id="1">Добавить в корзину</button>
             </div>
 
-            <div class="product-details">
+            <div class="horse-details">
                 <h3>Характеристики</h3>
                 <ul>
-                    <li><strong>Материал:</strong> массив дуба</li>
-                    <li><strong>Размеры:</strong> 120×80×75 см</li>
-                    <li><strong>Цвет:</strong> натуральное дерево</li>
-                    <li><strong>Вес:</strong> 15 кг</li>
-                    <li><strong>Гарантия:</strong> 2 года</li>
+                    <li><strong>Порода:</strong> Арабская чистокровная</li>
+                    <li><strong>Возраст:</strong> 4 года</li>
+                    <li><strong>Пол:</strong> Жеребец</li>
+                    <li><strong>Рост в холке:</strong> 155 см</li>
+                    <li><strong>Масть:</strong> Серая</li>
+                    <li><strong>Документы:</strong> Есть</li>
                 </ul>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="horse-footer">
         <div class="container">
-            <p>&copy; 2023 Магазин "Уютный дом". Все права защищены.</p>
+            <p>&copy; 2025 LOШАДКИ. Все права защищены.</p>
         </div>
     </footer>
 

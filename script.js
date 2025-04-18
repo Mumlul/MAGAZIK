@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelectorAll('.add-to-cart').forEach(button => {
         button.addEventListener('click', function() {
             const productId = this.getAttribute('data-id');
-            const productName = this.closest('.product-card')?.querySelector('h3')?.textContent || 'Товар';
-            const productPrice = this.closest('.product-card')?.querySelector('.price')?.textContent || '0';
+            const productName = this.closest('.horse-card')?.querySelector('h3')?.textContent || 'Лошадь';
+            const productPrice = this.closest('.horse-card')?.querySelector('.price')?.textContent || '0';
             
             let cart = JSON.parse(localStorage.getItem('cart')) || [];
             
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function() {
             localStorage.setItem('cart', JSON.stringify(cart));
             updateCartCount();
             
-            alert(`${productName} добавлен в корзину!`);
+            alert(`${productName} добавлена в корзину!`);
         });
     });
 
@@ -53,22 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Фильтрация товаров
-    const categoryFilter = document.getElementById('category-filter');
+    const breedFilter = document.getElementById('breed-filter');
     const priceFilter = document.getElementById('price-filter');
     
-    if (categoryFilter && priceFilter) {
-        function filterProducts() {
-            const category = categoryFilter.value;
+    if (breedFilter && priceFilter) {
+        function filterHorses() {
+            const breed = breedFilter.value;
             const price = priceFilter.value;
             
-            document.querySelectorAll('.product-card').forEach(card => {
-                const cardCategory = card.getAttribute('data-category');
+            document.querySelectorAll('.horse-card').forEach(card => {
+                const cardBreed = card.getAttribute('data-breed');
                 const cardPrice = card.getAttribute('data-price');
                 
-                const categoryMatch = category === 'all' || cardCategory === category;
+                const breedMatch = breed === 'all' || cardBreed === breed;
                 const priceMatch = price === 'all' || cardPrice === price;
                 
-                if (categoryMatch && priceMatch) {
+                if (breedMatch && priceMatch) {
                     card.style.display = 'block';
                 } else {
                     card.style.display = 'none';
@@ -76,16 +76,21 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
         
-        categoryFilter.addEventListener('change', filterProducts);
-        priceFilter.addEventListener('change', filterProducts);
+        breedFilter.addEventListener('change', filterHorses);
+        priceFilter.addEventListener('change', filterHorses);
     }
 
     // Удаление товара из корзины
     document.querySelectorAll('.remove-item').forEach(button => {
         button.addEventListener('click', function() {
             const cartItem = this.closest('.cart-item');
+            const productId = this.closest('.cart-item')?.querySelector('input[name="productId"]')?.value;
+            
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cart = cart.filter(item => item.id !== productId);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            
             cartItem.remove();
-            // Здесь должна быть логика обновления localStorage
             updateCartCount();
         });
     });

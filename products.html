@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Магазин "Уютный дом" - Товары</title>
+    <title>LOШАДКИ - Каталог</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header class="horse-header">
         <div class="container">
-            <h1>Уютный дом</h1>
+            <h1>LOШАДКИ</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Главная</a></li>
-                    <li><a href="products.html" class="active">Товары</a></li>
+                    <li><a href="products.html" class="active">Лошади</a></li>
                     <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
                     <li><a href="contact.html">Контакты</a></li>
                 </ul>
@@ -22,77 +22,77 @@
     </header>
 
     <main class="container">
-        <h2>Все товары</h2>
+        <h2>Все лошади</h2>
         <div class="filters">
-            <select id="category-filter">
-                <option value="all">Все категории</option>
-                <option value="furniture">Мебель</option>
-                <option value="lighting">Освещение</option>
-                <option value="decor">Декор</option>
+            <select id="breed-filter">
+                <option value="all">Все породы</option>
+                <option value="arabian">Арабская</option>
+                <option value="friesian">Фризская</option>
+                <option value="akhal-teke">Ахалтекинская</option>
             </select>
             <select id="price-filter">
                 <option value="all">Любая цена</option>
-                <option value="low">До 5000 ₽</option>
-                <option value="medium">5000-10000 ₽</option>
-                <option value="high">От 10000 ₽</option>
+                <option value="low">До 2 млн ₽</option>
+                <option value="medium">2-5 млн ₽</option>
+                <option value="high">От 5 млн ₽</option>
             </select>
         </div>
 
-        <div class="products-grid">
-            <div class="product-card" data-category="furniture" data-price="high">
+        <div class="horses-grid">
+            <div class="horse-card" data-breed="arabian" data-price="medium">
                 <a href="product-detail.html?id=1">
-                    <img src="https://via.placeholder.com/200" alt="Товар 1">
-                    <h3>Мягкое кресло</h3>
-                    <p class="price">5 999 ₽</p>
+                    <img src="https://source.unsplash.com/random/300x200?horse" alt="Арабская лошадь">
+                    <h3>Арабская лошадь</h3>
+                    <p class="price">1 500 000 ₽</p>
                 </a>
                 <button class="btn add-to-cart" data-id="1">В корзину</button>
             </div>
-            <div class="product-card" data-category="lighting" data-price="low">
+            <div class="horse-card" data-breed="friesian" data-price="medium">
                 <a href="product-detail.html?id=2">
-                    <img src="https://via.placeholder.com/200" alt="Товар 2">
-                    <h3>Современный светильник</h3>
-                    <p class="price">2 499 ₽</p>
+                    <img src="https://source.unsplash.com/random/300x200?horse2" alt="Фризская лошадь">
+                    <h3>Фризская лошадь</h3>
+                    <p class="price">2 300 000 ₽</p>
                 </a>
                 <button class="btn add-to-cart" data-id="2">В корзину</button>
             </div>
-            <div class="product-card" data-category="furniture" data-price="high">
+            <div class="horse-card" data-breed="akhal-teke" data-price="high">
                 <a href="product-detail.html?id=3">
-                    <img src="https://via.placeholder.com/200" alt="Товар 3">
-                    <h3>Деревянный стол</h3>
-                    <p class="price">8 799 ₽</p>
+                    <img src="https://source.unsplash.com/random/300x200?horse3" alt="Ахалтекинская">
+                    <h3>Ахалтекинская</h3>
+                    <p class="price">3 200 000 ₽</p>
                 </a>
                 <button class="btn add-to-cart" data-id="3">В корзину</button>
             </div>
-            <div class="product-card" data-category="decor" data-price="low">
+            <div class="horse-card" data-breed="arabian" data-price="high">
                 <a href="product-detail.html?id=4">
-                    <img src="https://via.placeholder.com/200" alt="Товар 4">
-                    <h3>Декоративная подушка</h3>
-                    <p class="price">1 299 ₽</p>
+                    <img src="https://source.unsplash.com/random/300x200?horse4" alt="Арабская премиум">
+                    <h3>Арабская премиум</h3>
+                    <p class="price">5 800 000 ₽</p>
                 </a>
                 <button class="btn add-to-cart" data-id="4">В корзину</button>
             </div>
-            <div class="product-card" data-category="furniture" data-price="medium">
+            <div class="horse-card" data-breed="friesian" data-price="low">
                 <a href="product-detail.html?id=5">
-                    <img src="https://via.placeholder.com/200" alt="Товар 5">
-                    <h3>Комод</h3>
-                    <p class="price">6 499 ₽</p>
+                    <img src="https://source.unsplash.com/random/300x200?horse5" alt="Фризская молодая">
+                    <h3>Фризская молодая</h3>
+                    <p class="price">1 800 000 ₽</p>
                 </a>
                 <button class="btn add-to-cart" data-id="5">В корзину</button>
             </div>
-            <div class="product-card" data-category="lighting" data-price="medium">
+            <div class="horse-card" data-breed="akhal-teke" data-price="medium">
                 <a href="product-detail.html?id=6">
-                    <img src="https://via.placeholder.com/200" alt="Товар 6">
-                    <h3>Настольная лампа</h3>
-                    <p class="price">3 799 ₽</p>
+                    <img src="https://source.unsplash.com/random/300x200?horse6" alt="Ахалтекинская золотая">
+                    <h3>Ахалтекинская золотая</h3>
+                    <p class="price">4 500 000 ₽</p>
                 </a>
                 <button class="btn add-to-cart" data-id="6">В корзину</button>
             </div>
         </div>
     </main>
 
-    <footer>
+    <footer class="horse-footer">
         <div class="container">
-            <p>&copy; 2023 Магазин "Уютный дом". Все права защищены.</p>
+            <p>&copy; 2025 LOШАДКИ. Все права защищены.</p>
         </div>
     </footer>
 
