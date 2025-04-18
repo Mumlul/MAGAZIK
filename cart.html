@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин "Уютный дом" - Корзина</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Уютный дом</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="products.html">Товары</a></li>
+                    <li><a href="cart.html" class="active">Корзина (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Ваша корзина</h2>
+        <div class="cart-container">
+            <div class="cart-items">
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/100" alt="Мягкое кресло">
+                    <div class="cart-item-info">
+                        <h3>Мягкое кресло</h3>
+                        <p class="price">5 999 ₽</p>
+                        <div class="quantity">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="1" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item">×</button>
+                </div>
+
+                <div class="cart-item">
+                    <img src="https://via.placeholder.com/100" alt="Современный светильник">
+                    <div class="cart-item-info">
+                        <h3>Современный светильник</h3>
+                        <p class="price">2 499 ₽</p>
+                        <div class="quantity">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" value="2" min="1" class="quantity-input">
+                            <button class="quantity-btn plus">+</button>
+                        </div>
+                    </div>
+                    <button class="remove-item">×</button>
+                </div>
+            </div>
+
+            <div class="cart-summary">
+                <h3>Итого</h3>
+                <div class="summary-row">
+                    <span>Товары (3)</span>
+                    <span>10 997 ₽</span>
+                </div>
+                <div class="summary-row">
+                    <span>Доставка</span>
+                    <span>Бесплатно</span>
+                </div>
+                <div class="summary-row total">
+                    <span>К оплате</span>
+                    <span>10 997 ₽</span>
+                </div>
+                <button class="btn checkout-btn">Оформить заказ</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Магазин "Уютный дом". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

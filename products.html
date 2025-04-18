@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магазин "Уютный дом" - Товары</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Уютный дом</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="products.html" class="active">Товары</a></li>
+                    <li><a href="cart.html">Корзина (<span id="cart-count">0</span>)</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Все товары</h2>
+        <div class="filters">
+            <select id="category-filter">
+                <option value="all">Все категории</option>
+                <option value="furniture">Мебель</option>
+                <option value="lighting">Освещение</option>
+                <option value="decor">Декор</option>
+            </select>
+            <select id="price-filter">
+                <option value="all">Любая цена</option>
+                <option value="low">До 5000 ₽</option>
+                <option value="medium">5000-10000 ₽</option>
+                <option value="high">От 10000 ₽</option>
+            </select>
+        </div>
+
+        <div class="products-grid">
+            <div class="product-card" data-category="furniture" data-price="high">
+                <a href="product-detail.html?id=1">
+                    <img src="https://via.placeholder.com/200" alt="Товар 1">
+                    <h3>Мягкое кресло</h3>
+                    <p class="price">5 999 ₽</p>
+                </a>
+                <button class="btn add-to-cart" data-id="1">В корзину</button>
+            </div>
+            <div class="product-card" data-category="lighting" data-price="low">
+                <a href="product-detail.html?id=2">
+                    <img src="https://via.placeholder.com/200" alt="Товар 2">
+                    <h3>Современный светильник</h3>
+                    <p class="price">2 499 ₽</p>
+                </a>
+                <button class="btn add-to-cart" data-id="2">В корзину</button>
+            </div>
+            <div class="product-card" data-category="furniture" data-price="high">
+                <a href="product-detail.html?id=3">
+                    <img src="https://via.placeholder.com/200" alt="Товар 3">
+                    <h3>Деревянный стол</h3>
+                    <p class="price">8 799 ₽</p>
+                </a>
+                <button class="btn add-to-cart" data-id="3">В корзину</button>
+            </div>
+            <div class="product-card" data-category="decor" data-price="low">
+                <a href="product-detail.html?id=4">
+                    <img src="https://via.placeholder.com/200" alt="Товар 4">
+                    <h3>Декоративная подушка</h3>
+                    <p class="price">1 299 ₽</p>
+                </a>
+                <button class="btn add-to-cart" data-id="4">В корзину</button>
+            </div>
+            <div class="product-card" data-category="furniture" data-price="medium">
+                <a href="product-detail.html?id=5">
+                    <img src="https://via.placeholder.com/200" alt="Товар 5">
+                    <h3>Комод</h3>
+                    <p class="price">6 499 ₽</p>
+                </a>
+                <button class="btn add-to-cart" data-id="5">В корзину</button>
+            </div>
+            <div class="product-card" data-category="lighting" data-price="medium">
+                <a href="product-detail.html?id=6">
+                    <img src="https://via.placeholder.com/200" alt="Товар 6">
+                    <h3>Настольная лампа</h3>
+                    <p class="price">3 799 ₽</p>
+                </a>
+                <button class="btn add-to-cart" data-id="6">В корзину</button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Магазин "Уютный дом". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
